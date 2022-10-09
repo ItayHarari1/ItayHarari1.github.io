@@ -1,0 +1,411 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
+.pageTitle {
+    color:brown;
+    font-family: Manrope, sans-serif;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+i{
+    font-weight: bold;
+}
+nav li a{
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    text-decoration: none;
+    color:white;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes backgroundAnim {
+    0% {background-position: 25% 50%;}
+    50% {background-position: 75% 30%;}
+    100% {background-position: 0% 50%;}
+} 
+.toolbar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+}
+
+/*ul.toolbar li {
+    float: left;
+    color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    border-right: 0.1vw solid white;
+    transition: 0.3s;
+    display: inline;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+}*/
+ul.toolbar li {
+    float: left;
+    color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    border-right: 0.1vw solid white;
+    transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    width: 33.2%;
+}
+ul.toolbar li:last-child{border-right: none;}
+ul.toolbar li:hover {
+    display: block;
+    background-color: #111111;
+    font-weight: bold;
+    cursor: pointer;
+}
+ul.toolbar li:active {
+    transition: 0.1s;
+    background-color: blue;
+    font-weight: bolder;
+}
+.copyright {
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.midSection{
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 18vh;
+    font-size: larger;
+    margin-bottom: 20vh;
+}
+.midSection .itaysPhoto {
+    display: block;
+    max-width: 20vw;
+    max-height: 350vh;
+    height: auto;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2.5px 2.5px 2px 2px darkgray;
+    border: 3px solid black;
+}
+.midSection .linkedIn {
+    padding: 30px;
+    display: block;
+    text-align: center;
+}
+.icons {
+    width:20px;
+    height:20px;
+    border-radius: 2px;
+    vertical-align: bottom;
+    color: blue;
+}
+/*.star{
+    position: relative;
+    width: 1vw;
+    left: -2%;
+    top: 50%;
+    height: 0.1vh;
+    background-color: blue;
+    color: aqua;
+    animation: starAnim 5s linear;
+}
+@keyframes starAnim {
+    0% {left: 1%;top:50%;width: 1vw;}
+    33%{left:60%; top: 50%;width: 30vw;transform:rotate(0deg)
+        translate(-165px)
+        rotate(0deg);}
+    35%{width: 1vw;}
+    66%{transform:rotate(-360deg)
+        translate(-165px)
+        rotate(-360deg);}
+    100%{left: 0%; width: 0vw;}
+}*/
+body {
+    background-image: url('pexels-adrien-olichon-bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+   /* background: linear-gradient(45deg,black, darkgreen,green,lightgreen); */
+    animation: backgroundAnim 50s ease-in-out infinite; 
+}
+.facts {
+    position: -webkit-sticky;
+    position: sticky;   
+    border: #111111 solid 1px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.facts button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+#factText {
+    visibility: hidden;
+    color: #000;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.backgroundAnimParts{
+    background-color: black;
+    z-index: 0;
+    height: 3vh;
+    width: 1vw;
+    animation: animParts 10s ease-in 0 infinite both alternate-reverse;
+}
+@keyframes animParts {
+    0% {opacity:0 ; bottom: 0;}
+    33% {opacity: 0.3; bottom: 30vh; scale: 0.3;}
+    67% {opacity: 0.6; bottom: 60vh; scale: 1;}
+    100% {opacity: 0.9; bottom: 90vh; scale: 0.6;}
+}
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.experience{
+    margin-bottom: 100vh;
+}
+.experience > div{
+   background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  width: 16%;
+  text-align: justify;
+  height: 8vh;
+  float: left;
+  border: none;
+  outline: none;
+  opacity: 0.6;
+  transition: 0.4s;
+  margin-right: 5%; 
+}
+.experience > div :hover{
+    opacity: 0.8;
+}
+.experience > div:last-child{
+    margin-bottom: 30vh;
+}
+#expAca, #expOthers{
+    color: #000;
+}
+.experience > div > div {
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: left;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    line-height: 130%;
+    margin: 1vh 1vw;
+    background-color: white;
+    opacity: .8;
+    border: black solid 2px;
+    border-radius: 10%;
+    max-width: 20vw;
+    padding: 10px;
+    box-shadow: lightblue solid 2px;
+    display: none; */
+    position: absolute;
+    margin-top: 3.8%;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  width: inherit;
+  color: black;
+}
+.experience > div > div > * {
+    color: #000;
+    overflow-x:visible;
+}
+.experience > div::first-line {
+    font-weight: bold;
+    visibility: visible;
+}
+section{
+    height: 100%;
+    width:100%;
+}
+h2{
+    position: relative;
+    top: 10%;
+    margin-bottom: 5vh;
+}
+#projects{
+    height: 100vh;
+}
+#projects span{
+    position: relative;
+    top: 7%;
+}
+.expTitle{
+    background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  float: left;
+  text-align: left;
+  border: none;
+  outline: none;
+  opacity: 0.6;
+  transition: opacity 0.4s;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.expActive, .expTitle:hover{
+    opacity: 0.9;
+}
+
+
+
+
+button {
+    width: 100%;
+}
+
+#langs{
+    position: absolute;
+    top: 180%;
+    width: 100px;
+    max-height: 50%;
+    transition: .4s ease-in-out;
+    display: block;
+    left: 42%;
+    z-index: 100;
+    height: 30vh;
+    box-align: center;
+    text-align: center;
+    color: #eee;
+}
+#langs h3{
+    overflow-x: visible;
+}
+#langs ul{
+    opacity: 0;
+}
+.lt, .gt {
+    font-size: 550%;
+    color: white;
+    top: 0;
+    position: absolute;
+    margin-top: 4vh;
+}
+/*#langs:hover .gt, .lt{
+    font-size: 20vh;
+}*/
+#langs:hover{
+    width: 97vw;
+    left: 0%;
+}
+#langs:hover ul{
+    transition: 0.6s;
+    transition-delay: 0.6s;
+    visibility: visible;
+    opacity: 1;
+}
+.lt{
+    left: 0%;
+    float: left;
+    text-align: left;
+}
+.gt{
+    right: 0%;
+    float: right;
+    text-align: right;
+}
+#langs > ul{
+    visibility: hidden;
+    opacity: 0;
+    top: 50%;
+    list-style-type: none;
+    font-size: 90%;
+    display: contents;
+}
+footer div button{
+    background-color: aqua;
+    color: black;
+    opacity: 0.8;
+}
+@media screen and (max-width: 600px){
+    ul.toolbar li {
+        border-right: 0;
+        display: inline;
+        width: 100%;
+    }
+    nav li a{
+        width: 100%;
+        border: none;
+        margin-right: 0;
+    }
+    .tb-about{
+        
+        overflow: hidden;
+    }
+    nav li{
+        width: 100%;
+    }
+    nav a{
+        width: 100%;
+    }
+    .experience{
+        display: grid;
+        padding-bottom: 50vh;
+    }
+    .expTitle{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .expTitle *{
+        width: 100%;
+        display: block;
+    }
+    .experience > div{
+        margin-bottom: 40vh;
+        width: 97vw;
+    }
+    .experience > div > div{
+        width: 97%;
+        margin-top: 10%;
+    }
+    #langs{
+        margin-top: 150vh;
+    }
+}
+@media  screen and (width:420px){
+    body{
+        background-image: url('rickroll.gif');
+        color: purple;
+    }
+}
+@media screen and (max-width:350px) {
+    #langs:hover .lt, #langs:hover .gt{
+        opacity: 0;
+        transition: opacity 0.25s ease-out;
+        transition-delay: 0.35s;
+    }
+}

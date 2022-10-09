@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Itay Harari, Frontend Developer, Backend Developer, Fullstack Developer">
+    <meta name="description" content="Itay Harari's portfolio site">
+    <meta name="author" content="Itay Harari">
+    <!--<base href="url" target=_blank>-->
+    <title>Itay Harari's Portfolio Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
+    <script src="script.js"></script>
+    <!--<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>-->
+</head>
+<body onload="funcOnLoad();">
+    <h1 class="pageTitle">Itay's Portfolio Site</h1>
+    <ul class="toolbar">
+        <nav style="width:100% ;">
+            <li><a href="#" class="tb-home"> Home</a></li>
+            <li><a href="#aboutMe" class="tb-about"> About Myself</a></li>
+            <li><a href="#projects" class="tb-projects"> Projects</a></li>
+        </nav>
+    </ul>
+    <section class="midSection">
+        <img class="itaysPhoto" src="myPhoto.jpg" alt="Itay Harari's photo">
+        <div class="star"></div>
+        <nav>
+            <div class="linkedIn">
+                <a href="https://www.linkedin.com/in/itay-harari/" style="color: white;"><img class="icons" src="linkedin.png" alt="LinkedIn logo" height="20px" width="20px">  https://www.linkedin.com/in/itay-harari/</a><br>
+            </div>
+            <div class="mail">
+                <a href="mailto: itayharari565@gmail.com" style="color: white;"> <img class="icons" src="mail.png" alt="mail icon" height="0.25vw" width="0.25vw">  itayharari565@gmail.com</a>
+            </div>
+        </nav>
+    </section>
+    <section id="aboutMe"><h2 style="top:3.7vh">About Myself</h2>
+        <span>I'm Itay, I'm <span id="age"></span> years old electrical engineering student. Nice to meet you!<br>
+            Please click the boxes to learn more about me and my experience.
+        </span>
+        <div class="experience">
+            <div>
+                <button class="expTitle" onclick="expFunc('expIT');">IT experience<br></button>
+                <div id="expIT" onclick="expFunc('expIT');">
+                    (Almost) a year experience. During it I've learned:<br>
+                    Admin role in: <i>G-suite</i>, <i>1password</i>, <i>Atlassian</i> services (including Jira), Zoom, Azure and more <br>
+                    <i>Bash</i> and scripting <br>
+                    Infrastructure project (deploying workstations, post-COVID "back to office") <br>
+                    Image deployment and creation (using Clonezilla) <br>
+                    Debugging hardware (including desktops, Mac and Windows laptops) <br>
+                    Managing switches and networks <br>
+                </div>
+            </div>
+            <div>
+                <button class="expTitle" onclick="expFunc('expMil');">Military service<br></button>
+                <div id="expMil" onclick="expFunc('expMil');">
+                    Served in technological-intelligence unit for 2.10 years (including permanent service) <br>
+                    Awarded outstanding soldier award <br>
+                    Served as deputy platoon commander and served as the commander in her absence <br>
+                    Commander of a new unique course I've built <br>
+                </div>
+            </div>
+            <div>
+                <button class="expTitle" onclick="expFunc('expAca');">Academic education<br></button>
+                <div id="expAca" onclick="expFunc('expAca');">
+                    <p id="studiesStatus"></p>
+                </div>
+            </div>
+            <div>
+                <button class="expTitle" onclick="expFunc('expOthers');">Others<br></button>
+                <div id="expOthers" onclick="expFunc('expOthers');">
+                    <ul>
+                    <li style="color: black;">Worked as an instructor in "Cybernet Academy" for 6 months – taught student age 6-14 various courses such as
+                    technological entrepreneurship. Also designed 2 courses: coding in LUA (Roblox development language) and
+                    coding for Minecraft.</li>
+                <li style="color: black;"> High School: software development student, graduated with honors. 5 units at: Math, English, Arabic,
+                    chemistry, computer science, computer science project and physics. </li>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="langs"><h3>My Languages</h3>
+            <p class="lt">&lt;</p>
+                <ul>
+                    <li>Python (including Pandas and NumPy)</li>
+                    <li>Java/C#</li>
+                    <li>HTML/CSS/JavaScript</li>
+                </ul>
+            <p class="gt">&gt;</p>
+        </div>
+    </section>
+    <section id="projects"><h2>Projects</h2>
+        <span>This section will expand in the (near) future. Meanwhile enjoy this site as my first project!</span>
+    </section>
+    <div class="backgroundAnimParts"></div>
+        <div></div><div style="left: 30vw;"></div><div style="left: 60vw;"></div>
+</body>
+<footer>
+    <div class="facts">
+        <button type="button" onclick="factPop()">Click for a totally random fact about me</button><br>
+        <p id="factText"></p>
+    </div>
+    <p class="copyright" style="color: white;">&copy;  All rights reserved for Itay Harari.</p>
+</footer>
+</html>
