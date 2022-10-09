@@ -352,7 +352,7 @@ footer div button{
 }
 @media screen and (max-width: 600px){
     body{
-        animation: backgroundAnim 100s ease-in-out infinite; 
+        animation: backgroundAnim 750s ease-in-out infinite; 
     }
     ul.toolbar li {
         border-right: 0;
