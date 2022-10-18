@@ -61,9 +61,13 @@ ul.toolbar li {
     position: sticky;
     border-right: 0.1vw solid white;
     transition: 0.3s;
+    -o-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
     display: inline-block;
     text-align: center;
     user-select: none;
+    -moz-user-select: none;
     -webkit-user-select: none;
     width: 33.2%;
 }
@@ -76,6 +80,9 @@ ul.toolbar li:hover {
 }
 ul.toolbar li:active {
     transition: 0.1s;
+    -o-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -webkit-transition: 0.1s;
     background-color: blue;
     font-weight: bolder;
 }
@@ -201,6 +208,9 @@ footer {
   outline: none;
   opacity: 0.6;
   transition: 0.4s;
+  -o-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -webkit-transition: 0.4s;
   margin-right: 5%; 
 }
 .experience > div :hover{
@@ -234,6 +244,9 @@ footer {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  -moz-transition: max-height 0.2s ease-out;
+  -webkit-transition: max-height 0.2s ease-out;
   width: inherit;
   color: black;
 }
@@ -271,6 +284,9 @@ h2{
   outline: none;
   opacity: 0.6;
   transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -294,6 +310,9 @@ button {
     width: 100px;
     max-height: 50%;
     transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -webkit-transition: .4s ease-in-out;
     display: block;
     left: 42%;
     z-index: 100;
@@ -324,7 +343,13 @@ button {
 }
 #langs:hover ul{
     transition: 0.6s;
+    -o-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -webkit-transition: 0.6s;;
     transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    -moz-transition-delay: 0.6s;
+    -webkit-transition-delay: 0.6s;
     visibility: visible;
     opacity: 1;
 }
@@ -353,7 +378,10 @@ footer div button{
 }
 @media screen and (max-width: 600px){
     body{
-        animation: backgroundAnim 750s ease-in-out infinite; 
+        animation: backgroundAnim 750s ease-in-out infinite;
+        -o-animation: backgroundAnim 750s ease-in-out infinite;
+        -moz-animation: backgroundAnim 750s ease-in-out infinite;
+        -webkit-animation: backgroundAnim 750s ease-in-out infinite;
     }
     ul.toolbar li {
         border-right: 0;
@@ -403,6 +431,10 @@ footer div button{
     #langs{
         bottom: 80vh;
     }
+    #langs:active{
+        width: 97vw;
+        left: 0%;
+    }
 }
 @media  screen and (width:420px){
     body{
@@ -414,6 +446,13 @@ footer div button{
     #langs:hover .lt, #langs:hover .gt{
         opacity: 0;
         transition: opacity 0.25s ease-out;
+        -o-transition: opacity 0.25s ease-out;
+        -moz-transition: opacity 0.25s ease-out;
+        -webkit-transition: opacity 0.25s ease-out;
         transition-delay: 0.35s;
+        -o-transition-delay: 0.35s;
+        -moz-transition-delay: 0.35s;
+        -webkit-transition-delay: 0.35s;
+        
     }
 }
